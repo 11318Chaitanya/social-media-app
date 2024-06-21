@@ -20,8 +20,8 @@ Feel free to suggest or contribute additional features to enhance our platform!
 
 ## Tech Stack
 
-- **Frontend**: Vite, Chakra UI
-- **Backend**: Express, Node.js
+- **Frontend**: Vite, Chakra UI, React Recoil
+- **Backend**: Express, Node.js, MongoDB, Socket.io
 
 ## Installation and Getting Started
 
@@ -40,25 +40,24 @@ Ensure you have the following installed on your system:
     cd social-media-platform
     ```
 
-2. Navigate to the `backend` directory:
+2. Install backend dependencies:
     ```bash
-    cd backend
+    npm i
     ```
 
-3. Install backend dependencies:
-    ```bash
-    npm install
-    ```
-
-4. Create a `.env` file in the `backend` directory and add your environment variables (e.g., database connection string, JWT secret):
+3. Create a `.env` file in the `backend` directory and add your environment variables (e.g., database connection string, JWT secret):
     ```env
-    DATABASE_URL=your_database_url
-    JWT_SECRET=your_jwt_secret
+    PORT=...
+    MONGO_URI=...
+    JWT_SECRET=...
+    CLOUDINARY_CLOUD_NAME=...
+    CLOUDINARY_API_KEY=...
+    CLOUDINARY_API_SECRET=...
     ```
 
-5. Start the backend server:
+4. Start the backend server:
     ```bash
-    npm start
+    node backend/server.js
     ```
 
    The backend server should now be running on `http://localhost:5000`.
@@ -67,12 +66,12 @@ Ensure you have the following installed on your system:
 
 1. Navigate to the `frontend` directory:
     ```bash
-    cd ../frontend
+    cd frontend
     ```
 
 2. Install frontend dependencies:
     ```bash
-    npm install
+    npm i
     ```
 
 3. Start the frontend development server:
